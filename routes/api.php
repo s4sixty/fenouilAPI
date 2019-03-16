@@ -13,8 +13,11 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group([
+    'prefix' => 'customers',
+    'middleware' => 'auth:api'
+], function(){
+    Route::get('list', 'Api\V1\ClientsController@list');
 });
 
 Route::group([
@@ -30,6 +33,8 @@ Route::group([
         Route::get('user', 'AuthController@user');
     });
 });
+
+
 
 use Dingo\Api\Routing\Router;
 

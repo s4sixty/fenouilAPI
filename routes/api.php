@@ -15,9 +15,19 @@ use Illuminate\Http\Request;
 
 Route::group([
     'prefix' => 'customers',
-    'middleware' => 'auth:api'
+    'middleware' => ['auth:api','jsonx'],
 ], function(){
     Route::get('list', 'Api\V1\ClientsController@list');
+    Route::post('listParams', 'Api\V1\ClientsController@listParams');
+});
+
+Route::group([
+    'prefix' => 'orders',
+    'middleware' => 'auth:api'
+], function(){
+    Route::get('list', 'Api\V1\OrdersController@list');
+    Route::get('products', 'Api\V1\ProductsController@list');
+    Route::get('totalProductsSold', 'Api\V1\OrdersController@totalProductsSold');
 });
 
 Route::group([

@@ -4,8 +4,103 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1aa60d327641db734107dcf185ecf021",
+    "content-hash": "a3cc1a294e161c17d497d007d5ec67fd",
     "packages": [
+        {
+            "name": "auth0/auth0-php",
+            "version": "5.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/auth0/auth0-PHP.git",
+                "reference": "a8db6117c1efd4cc9f84fd18b309494cc04ec4a5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/auth0/auth0-PHP/zipball/a8db6117c1efd4cc9f84fd18b309494cc04ec4a5",
+                "reference": "a8db6117c1efd4cc9f84fd18b309494cc04ec4a5",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "firebase/php-jwt": "^5.0",
+                "guzzlehttp/guzzle": "~6.0",
+                "php": "^5.5 || ^7.0"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
+                "josegonzalez/dotenv": "^2.0",
+                "phpcompatibility/php-compatibility": "^8.1",
+                "phpunit/phpunit": "^4.8 || ^5.7",
+                "squizlabs/php_codesniffer": "^3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Auth0\\SDK\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Auth0",
+                    "email": "support@auth0.com",
+                    "homepage": "http://www.auth0.com/"
+                }
+            ],
+            "description": "Auth0 PHP SDK.",
+            "homepage": "https://github.com/auth0/auth0-PHP",
+            "time": "2019-02-28T17:37:39+00:00"
+        },
+        {
+            "name": "auth0/login",
+            "version": "5.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/auth0/laravel-auth0.git",
+                "reference": "6b02365c6b956635c60bbfa4454794cda959a0b0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/auth0/laravel-auth0/zipball/6b02365c6b956635c60bbfa4454794cda959a0b0",
+                "reference": "6b02365c6b956635c60bbfa4454794cda959a0b0",
+                "shasum": ""
+            },
+            "require": {
+                "auth0/auth0-php": "^5.1.0",
+                "illuminate/contracts": "5.*",
+                "illuminate/support": "5.*",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Auth0\\Login\\LoginServiceProvider"
+                    ],
+                    "aliases": {
+                        "Auth0": "Auth0\\Login\\Facade\\Auth0"
+                    }
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/controllers",
+                    "src/facade"
+                ],
+                "psr-0": {
+                    "Auth0\\Login\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Laravel plugin that helps authenticate with the auth0 service",
+            "time": "2018-03-20T19:12:33+00:00"
+        },
         {
             "name": "automattic/woocommerce",
             "version": "1.3.0",
@@ -52,6 +147,92 @@
                 "woocommerce"
             ],
             "time": "2017-06-06T20:38:08+00:00"
+        },
+        {
+            "name": "danharper/jsonx",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/danharper/JSONx.git",
+                "reference": "551ab64f6f4a9d19c516cc7c62ac449190c5a0e3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/danharper/JSONx/zipball/551ab64f6f4a9d19c516cc7c62ac449190c5a0e3",
+                "reference": "551ab64f6f4a9d19c516cc7c62ac449190c5a0e3",
+                "shasum": ""
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "danharper\\JSONx\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dan Harper",
+                    "email": "hello@dans.email"
+                }
+            ],
+            "description": "JSONx is an IBM standard format to represent JSON as XML https://twitter.com/danharper7/status/514822464673951744",
+            "time": "2015-11-22T16:07:46+00:00"
+        },
+        {
+            "name": "danharper/laravel-jsonx",
+            "version": "v0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/danharper/JSONx-for-Laravel.git",
+                "reference": "261a194dfe24cf6cd20d89f808d9c5e4628b9975"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/danharper/JSONx-for-Laravel/zipball/261a194dfe24cf6cd20d89f808d9c5e4628b9975",
+                "reference": "261a194dfe24cf6cd20d89f808d9c5e4628b9975",
+                "shasum": ""
+            },
+            "require": {
+                "danharper/jsonx": "^0.1.0",
+                "illuminate/http": ">=4.1.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "danharper\\LaravelJSONx\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dan Harper",
+                    "email": "hello@dans.email"
+                }
+            ],
+            "description": "Add XML support to a JSON-speaking Laravel API with a single middleware via JSONx",
+            "keywords": [
+                "ibm",
+                "json",
+                "jsonx",
+                "laravel",
+                "lumen",
+                "xml"
+            ],
+            "time": "2015-11-23T10:55:31+00:00"
         },
         {
             "name": "defuse/php-encryption",
@@ -2921,6 +3102,55 @@
                 "uuid"
             ],
             "time": "2018-07-19T23:38:55+00:00"
+        },
+        {
+            "name": "spatie/array-to-xml",
+            "version": "2.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/array-to-xml.git",
+                "reference": "2bf193b3f795d5a42e147c4fa155c288878312e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/array-to-xml/zipball/2bf193b3f795d5a42e147c4fa155c288878312e7",
+                "reference": "2bf193b3f795d5a42e147c4fa155c288878312e7",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^7.0",
+                "spatie/phpunit-snapshot-assertions": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\ArrayToXml\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://murze.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Convert an array to xml",
+            "homepage": "https://github.com/spatie/array-to-xml",
+            "keywords": [
+                "array",
+                "convert",
+                "xml"
+            ],
+            "time": "2019-03-15T18:43:25+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

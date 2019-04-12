@@ -9,12 +9,15 @@
     "license": "MIT",
     "require": {
         "php": "^7.1.3",
+        "auth0/login": "~5.0",
+        "danharper/laravel-jsonx": "^0.1.2",
         "dingo/api": "^2.0",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
         "laravel/passport": "^7.2",
         "laravel/tinker": "^1.0",
         "pixelpeter/laravel5-woocommerce-api-client": "3.0",
+        "spatie/array-to-xml": "^2.8",
         "zizaco/entrust": "5.2.x-dev"
     },
     "require-dev": {
